@@ -19,9 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Dhiraj Kakade',
       debugShowCheckedModeBanner: false,
+
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: const MyHomePage(),
     );
   }
@@ -43,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    // foo();
     controller1 = GifController(vsync: this);
     controller1.stop();
     controller.addListener(_scrollListener);
@@ -53,6 +56,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     });
 
     super.initState();
+  }
+
+  Future<void> foo() async {
+    throw Exception('FooException');
   }
 
   bool sliverActionsHidden = true;
@@ -110,6 +117,50 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   List<String> hidoc = ["assets/hidoc1.jpg", "assets/hidoc2.jpg", "assets/hidoc3.jpg", "assets/hidoc4.jpg"];
   List<String> dhiraj = ["dhiraj1.png", "dhiraj2.png", "dhiraj3.png", "dhiraj4.png", "dhiraj5.png", "dhiraj6.png", "dhiraj7.png", "dhiraj8.png", "dhiraj9.png", "dhiraj10.png", "dhiraj11.png", "dhiraj12.png"];
   String imageAssets = 'assets/';
+  // List<String> dhiraj = [
+  //   "d1.png",
+  //   "d2.png",
+  //   "d3.png",
+  //   "d4.png",
+  //   "d5.png",
+  //   "d6.png",
+  //   "d7.png",
+  //   "d8.png",
+  //   "d9.png",
+  //   "d10.png",
+  //   "d11.png",
+  //   "d12.png",
+  //   "d13.png",
+  //   "d14.png",
+  //   "d15.png",
+  //   "d16.png",
+  //   "d17.png",
+  //   "d18.png",
+  //   "d19.png",
+  //   "d20.png",
+  //   "d21.png",
+  //   "d22.png",
+  //   "d23.png",
+  //   "d24.png",
+  //   "d25.png",
+  //   "d26.png",
+  //   "d27.png",
+  //   "d28.png",
+  //   "d29.png",
+  //   "d30.png",
+  //   "d31.png",
+  //   "d32.png",
+  //   "d33.png",
+  //   "d34.png",
+  //   "d35.png",
+  //   "d36.png",
+  //   "d37.png",
+  //   "d38.png",
+  //   "d39.png",
+  //   "d40.png",
+  //
+  //
+  // ];
 
   // final imageAssets = ImageAssetCache(basePath: 'assets/anim/');
 
@@ -284,11 +335,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black45, fontSize: 16),
                             ),
                             TextSpan(
-                              text: '4 years of experience developing Android applications using Java, and Android Studio. Successfully launched 3 mobile apps with over 100,000 downloads. Strong understanding of Android architecture, UI/UX design, and performance optimization.',
+                              text: '4 years of experience developing Android applications using Java, and Android Studio. Successfully launched 20+ mobile apps with over 100,000 downloads. Strong understanding of Android architecture, UI/UX design, and performance optimization.',
                               style: TextStyle(fontWeight: FontWeight.normal, color: Colors.black45, fontSize: 16),
                             ),
                             TextSpan(
-                              text: '\n\n3 years of experience building cross-platform mobile apps with Flutter. Proficient in Dart, Flutter libraries, and UI/UX design principles. Contributed to the development of 2 open-source Flutter projects. Passionate about building high-quality, user-friendly mobile experiences.',
+                              text: '\n\n3 years of experience building cross-platform mobile apps with Flutter. Proficient in Dart, Flutter libraries, and UI/UX design principles. Passionate about building high-quality, user-friendly mobile experiences.',
                               style: TextStyle(fontWeight: FontWeight.normal, color: Colors.black45, fontSize: 16),
                             ),
                           ],
